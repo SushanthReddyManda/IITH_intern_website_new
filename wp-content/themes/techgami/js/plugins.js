@@ -59,7 +59,7 @@ var polybg = {
       mesh.position.set(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
       mesh.position.multiplyScalar(75 + (Math.random() * 700));
       mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2);
-      this.particle.add(mesh);
+      this.particle.add();
     }
     this.scene.add(this.particle);
 
