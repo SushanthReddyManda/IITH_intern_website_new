@@ -1,0 +1,63 @@
+/*=============================================
+=              Techgmai Framework              =
+=============================================*/
+
+// Variables
+@import "variables";
+
+
+// Foundation
+@import "node_modules/foundation-sites/scss/foundation";
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-table;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+
+
+// Bourbon
+@import "node_modules/bourbon/core/bourbon";
+
+
+// base
+@import "base/loader";
+@import "base/homepage";
+@import "base/dev-sec-ops";
+@import "base/cloud-native";
+@import "base/product-development";
+@import "base/about-us";
+@import "base/contact";
+@import "base/globals";
+@import "base/white-space";
+@import "base/type";
+@import "base/forms";
+@import "base/layout";
+@import "base/header";
+@import "base/footer";
+@import "base/visibility";
+@import "base/terms-privacy";
+
+// Components
+@import "components/accordion";
+@import "components/buttons";
+@import "components/forms";
+@import "components/hero";
+@import "components/num-list";
+@import "components/cards";
+@import "components/learn-more-cta";
+@import "components/scrollreveal";
+
+/**
+  * Please do not delete this!
+  * This fixes an issue in Chrome where sections
+  * would not repaint immediately when being scrolled
+  * into view. This is caused by GPU-accelerated rendering,
+  * which we are using for the 3D effects.
+  */
+section,
+footer {
+    -webkit-transform: translate3d(0,0,0);
+}

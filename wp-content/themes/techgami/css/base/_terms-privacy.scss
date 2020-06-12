@@ -1,0 +1,78 @@
+/*==============================
+=        Terms & Privacy       =
+==============================*/
+
+body.privacy-policy,
+body.terms-of-use {
+
+  section.legal-content {
+
+    padding-bottom: $space-10;
+
+    @include breakpoint (medium down) {
+      padding-bottom: $space-8;
+    }
+
+    @include breakpoint (shmedium down) {
+      padding-bottom: $space-7;
+    }
+
+    @include breakpoint (small only) {
+      padding-bottom: $space-7;
+    }
+
+    .background {
+      padding: $space-10 $space-10 $space-10 0;
+      background: $blue;
+      position: relative;
+
+      @include breakpoint (medium down) {
+        padding: $space-8 $space-5 $space-8 0;
+      }
+
+      @include breakpoint (shmedium down) {
+        padding: $space-7 $space-6 $space-7 0;
+      }
+
+      @include breakpoint (small only) {
+        padding: $space-7 $space-3 $space-7 0;
+      }
+
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: -100%;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $blue;
+      }
+
+      h5 {
+        margin-bottom: rem-calc(15);
+      }
+
+      h4 {
+        margin-top: rem-calc(60);
+
+        &.intro {
+          margin-top: 0;
+        }
+        &.dual-title {
+          margin-bottom: rem-calc(8);
+        }
+      }
+
+      ul {
+        margin-left: 0;
+        li {
+          list-style: none;
+          color: $white;
+          margin-bottom: rem-calc(15);
+        }
+      }
+    }
+  }
+}

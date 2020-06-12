@@ -1,0 +1,134 @@
+/*==============================
+=            Footer            =
+==============================*/
+
+footer {
+    background: $black;
+    padding: $space-8 0 0 0;
+  
+    @include breakpoint(medium down) {
+      padding: $space-7 0 0 0;
+    }
+  
+    @include breakpoint(shmedium down) {
+      padding: $space-6 0 0 0;
+    }
+  
+    .footer-top {
+      padding-bottom: $space-5;
+  
+      a.footer-logo {
+        display: block;
+  
+        img {
+          width: inherit;
+        }
+  
+        @include breakpoint(medium down) {
+          margin-bottom: $space-5;
+        }
+  
+        @include breakpoint(medium down) {
+          margin-bottom: $space-4;
+        }
+      }
+  
+      ul {
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100px;
+        
+        @include breakpoint(small only) {
+          // display: block;
+          // height: auto;
+          // padding-bottom: $space-3;
+          height: 130px;
+  
+          li {
+            flex-basis: 0;
+            line-height: rem-calc(38);
+          }
+        }
+  
+        li {
+          flex-basis: 30px;
+  
+          a {
+            text-transform: none;
+            font-family: 'Karla', sans-serif;
+            font-size: rem-calc(14);
+            letter-spacing: 0;
+            color: $medium-gray;
+            transition: 0.3s color ease-in-out;
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    .bottom-bar {
+      padding-bottom: $space-2;
+  
+      .hr {
+        padding-top: $space-3;
+        border-top: 1px solid $light-white;
+        width: 100%;
+        opacity: 0.6;
+      }
+  
+      p.small {
+        font-size: rem-calc(12);
+  
+        @include breakpoint(small only) {
+          margin-bottom: $space-1;
+        }
+  
+      }
+  
+      ul {
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: no-wrap;
+        justify-content: flex-end;
+        text-align: right;
+  
+        @include breakpoint(small only) {
+          justify-content: flex-start;
+          text-align: left;
+        }
+  
+        li { 
+          padding-left: rem-calc(45);
+  
+          @include breakpoint(small only) {
+            padding-left: 0;
+            padding-right: $space-5;
+  
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+  
+          &:hover {
+            a {
+              opacity: 0.8;
+            }
+          }
+  
+          a {
+            font-size: rem-calc(10);
+            line-height: rem-calc(10);
+            color: $white;
+            opacity: 0.4;
+            transition: 0.3s opacity ease-in-out;
+          }
+        }
+      }
+    }
+  }

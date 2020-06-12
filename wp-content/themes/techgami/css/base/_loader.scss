@@ -1,0 +1,149 @@
+/*==============================
+=            Loader            =
+==============================*/
+
+body > * {
+    transition: 0.3s opacity ease-in-out;
+    opacity: 0;
+  
+    .about-quote, 
+    .about, 
+    .services,
+    .contact-us,
+    .section {
+      transition: 0.5s opacity ease-in-out 1.5s,
+                  0.5s transform ease-in-out 1.5s;
+      opacity: 0;
+      transform: translate3d(0,15px,0);
+    }
+  
+    #header {
+      transition: 0.5s opacity ease-in-out 1.5s,
+                  0.5s transform ease-in-out 1.5s;
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+  
+    #hero {
+  
+      h5 {
+        transition: 0.35s opacity ease-in-out 0.15s,
+                    0.35s transform ease-in-out 0.15s;
+        opacity: 0;
+        transform: translateY(10px);
+      }
+  
+      h1 {
+        .textline {
+          transition: 0.35s opacity ease-in-out 2.5s,
+                      0.35s transform ease-in-out 2.5s,
+                      0.2s color ease-in-out 3.5s;
+          opacity: 0;
+          color: transparent;
+          transform: translateY(0);
+          display: block;
+          float: left; 
+          clear: left;
+          position: relative;
+          overflow: hidden;
+  
+          &:before {
+            transition: 0.35s left ease-in-out 3.25s,
+                        0.35s width ease-in-out 3s;
+            content: '';
+            position: absolute;
+            left: 0;
+            background: $blue;
+            width: 0;
+            height: 100%;
+          }
+  
+          @for $i from 1 to 4 {
+            &:nth-child(#{$i}):before { 
+              transition: 0.3s left cubic-bezier(0.105, 0.265, 0.17, 0.975) (($i * 0.25s) + 3.25s),
+                          0.3s width cubic-bezier(0.105, 0.265, 0.17, 0.975) (($i * 0.25s) + 2.35s); 
+            }
+          }
+        }
+      }
+    }
+    #canvas {
+      transition: 1s opacity ease-in-out 1.25s,
+                  1s transform cubic-bezier(0.105, 0.265, 0.17, 0.975) 1.25s;
+      opacity: 0;
+      transform: scale(1.15);
+    }
+  }
+  
+  body.loaded {
+    & > * {
+      opacity: 1;
+    }
+  
+    .about-quote, 
+    .about, 
+    .services,
+    .contact-us,
+    .section {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  
+    #header {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    #hero {
+  
+      h5 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      h1 {
+        .textline {
+          opacity: 1;
+          transform: translateY(0);
+          color: $black;
+  
+          &:before {
+            left: 100%;
+            width: 100%;
+          } 
+        }
+      }
+    }
+    #canvas {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 1;
+    animation: loader-scale 4.25s linear infinite alternate;
+  
+    img {
+      animation: loader-spin 4.25s linear infinite;
+    }
+  }
+  
+  @keyframes loader-spin {
+      0%   {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);}
+  }
+  
+  @keyframes loader-scale {
+      0%   {transform: scale(1.2);}
+      100% {transform: scale(1.5);}
+  }
+  
+  

@@ -1,0 +1,387 @@
+/*==============================
+=           Homepage           =
+==============================*/
+
+section.about-quote {
+    display: flex;
+  
+    .background {
+      padding: $space-10 $space-5 $space-10 0;
+      background: $blue;
+      position: relative;
+  
+      @include breakpoint (medium down) {
+        padding: $space-8 $space-5 $space-8 0;
+      }
+  
+      @include breakpoint (shmedium down) {
+        padding: $space-7 $space-6 $space-7 0;
+      }
+  
+      @include breakpoint (small only) {
+        padding: $space-7 $space-3 $space-7 0;
+      }
+  
+  
+      &:before {
+        content: "";
+        position: absolute;
+        left: -100%;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $blue;
+      }
+  
+      h3.white {
+        max-width: rem-cacl(590);
+        margin-bottom: 0;
+      }
+    }
+  
+    .about-octagon {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  
+  section.about {
+    padding: $space-11 0;
+    background: $white;
+  
+    @include breakpoint (medium down) {
+      padding: $space-8 0;
+    }
+  
+    @include breakpoint (shmedium down) {
+      padding: $space-7 0;
+    }
+  
+    .vertical-type-container {
+      max-height: rem-calc(210);
+      position: relative;
+    }
+  
+    a.button {
+      margin-top: rem-calc(7);
+    }
+  
+    @include breakpoint (medium down) {
+  
+      .flex-right {
+        justify-content: flex-start;
+      }
+  
+      a.button {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  section.services {
+  
+    .row {
+  
+      @include breakpoint(small only) {
+        padding-left: 0;
+      }
+  
+      .services-container {
+        display: flex;
+  
+        @include breakpoint(small only) {
+          padding-left: 0;
+        }
+  
+        .background {
+          padding: $space-11 0;
+          background: $blue;
+          position: relative;
+  
+          @include breakpoint(medium down) {
+            padding: $space-7 $space-4 $space-7 $space-6;
+          }
+  
+          @include breakpoint(shmedium down) {
+            padding: $space-7 $space-4 $space-7 $space-7;
+          }
+  
+          @include breakpoint(small only) {
+            padding: $space-7 8%;
+  
+            & .columns {
+              padding: 0;
+            }
+          }
+  
+          .services__container {
+            @include breakpoint(xlarge only) {
+              margin-left: rem-calc(90);
+            }
+          }
+  
+          &:before {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: $blue;
+          }
+  
+          .slider-content {
+            position: absolute;
+            right: 0;
+            margin-top: rem-calc(53);
+            padding-right: $space-2;
+  
+            @include breakpoint (medium down) {
+              position: relative;
+              right: auto;
+              margin-top: 0;
+              padding-right: 0;
+              margin-bottom: $space-6;
+            }
+  
+            @include breakpoint (small only) {
+              margin-bottom: $space-5;
+            }
+  
+            .slider-content-inner {
+              transition: 0.35s opacity ease-in-out,
+                          0.35s transform ease-in-out;
+              opacity: 1;
+              transform: translateY(0);
+              z-index: 2;
+              visibility: visible;
+  
+              &:before {
+                content: '';
+                background: $blue;
+                width: 0;
+                right: 0;
+                height: 100%;
+                opacity: 0;
+                display: block;
+                position: absolute;
+                z-index: 3;
+                transition: 0.5s width cubic-bezier(0.105, 0.265, 0.17, 0.975) 0.1s,
+                            0.75s opacity cubic-bezier(0.105, 0.265, 0.17, 0.975);
+              }
+  
+              &.inactive {
+                opacity: 0;
+                transform: translateY(10px);
+                position: absolute;
+                visibility: hidden;
+  
+                &:before {
+                  opacity: 1;
+                  width: 100%;
+                }
+              }
+  
+              @include breakpoint (medium down) {
+                display: none;
+              }
+            }
+          }
+  
+          ul.slider-toggles {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+            list-style: none;
+  
+            li {
+              color: $light-white;
+              position: relative;
+              transition: 0.3s color ease-in-out;
+              cursor: pointer;
+  
+              @include breakpoint (medium down) {
+                cursor: text;
+              }
+  
+              &:last-child {
+  
+                .slider-content {
+  
+                  @include breakpoint (medium down) {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+  
+              h2 {
+                display: inline-block;
+                color: $light-white;
+                transition: 0.3s color ease-in-out;
+  
+                @include breakpoint (medium down) {
+                  color: $white;
+                  margin-bottom: $space-2;
+                }
+              }
+  
+              &.active {
+                color: $white;
+                h2 {
+                  color: $white;
+                }
+              }
+  
+              &:hover {
+                color: $white;
+  
+                h2 {
+                  color: $white;
+                }
+              }
+  
+              &:before {
+                content: "01";
+                font-family: 'maisonmono-regular';
+                font-weight: lighter;
+                font-size: rem-calc(12);
+                line-height: rem-calc(12);
+                letter-spacing: rem-calc(2);
+                margin-bottom: rem-calc(40);
+                -webkit-font-smoothing: antialiased;
+                position: absolute;
+                top: rem-calc(6);
+                display: block;
+                left: rem-calc(-35);
+  
+                @include breakpoint (medium down) {
+                  color: $white;
+                  opacity: 0.8;
+                }
+  
+                @include breakpoint(small only) {
+                  position: relative;
+                  top: 0;
+                  left: 0;
+                  margin-bottom: $space-2;
+                  display: none;
+                }
+              }
+  
+              &:first-child {
+  
+                &:before {
+                  content: "01";
+                }
+              }
+  
+              &:nth-child(2) {
+  
+                &:before {
+                  content: "02";
+                }
+              }
+  
+              &:last-child {
+  
+                &:before {
+                  content: "03";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .services-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      .services-button-up,
+      .services-button-down {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $blue;
+        padding: 50% 0;
+        width: 100%;
+        border-right: 1px solid $light-white;
+        transition: 0.3s background ease-in-out,
+                    0.3s border ease-in-out;
+        cursor: pointer;
+  
+        img.opacity-50 {
+          transition: 0.3s opacity ease-in-out;
+        }
+  
+        &:hover {
+          background: $dark-blue;
+        }
+      }
+  
+      .services-button-up {
+        border-bottom: 1px solid $light-white;
+      }
+    }
+  }
+  
+  section.contact-us {
+    padding: $space-11 0;
+  
+    @include breakpoint (medium down) {
+      padding: $space-8 0;
+    }
+  
+    @include breakpoint (shmedium down) {
+      padding: $space-7 0;
+    }
+  
+    .contact-us-form {
+      background: $blue;
+  
+      p {
+        margin: 0;
+      }
+  
+      input,
+      textarea {
+        color: $white;
+        font-size: rem-calc(16);
+      }
+  
+      #submit {
+        width: 100%;
+        background: rgba(255,255,255,0.15);
+        color: $white;
+        transition: 0.3s background ease-in-out;
+  
+        &:before {
+          display: none;
+        }
+  
+        &:hover {
+          background: #003fd9;
+        }
+      }
+    }
+  
+    .vertical-type {
+  
+      h3 {
+        width: rem-calc(230);
+        margin-top: rem-calc(230);
+  
+        @include breakpoint (medium down) {
+          width: auto;
+          margin-top: 0;
+        }
+      }
+    }
+  }

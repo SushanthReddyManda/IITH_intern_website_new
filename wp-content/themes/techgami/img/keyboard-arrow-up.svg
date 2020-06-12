@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="8px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/keyboard-arrow-right Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="7.406 15.703 6 14.297 12 8.297 18 14.297 16.594 15.703 12 11.109"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="R3---Home" transform="translate(-156.000000, -2274.000000)">
+            <g id="Services" transform="translate(109.000000, 1972.000000)">
+                <g id="Icon/keyboard-arrow-up" transform="translate(41.000000, 294.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="keyboard-arrow-up" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="Color/White" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="evenodd">
+                        <rect id="Fill/White" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,287 @@
+//  Variables
+//  ---------
+
+// Sass utilities
+@import 'node_modules/foundation-sites/scss/util/util';
+
+// Global
+// ---------
+
+$global-font-size: 100%;
+$global-width: rem-calc(1500);
+$global-lineheight: 1.5;
+$foundation-palette: (
+    primary: #004AFF,
+    secondary: #FFCE07,
+    success: #3adb76,
+    warning: #ffae00,
+    alert: #cc4b37,
+);
+$light-gray: #E7E8E8;
+$medium-gray: #999591;
+$dark-gray: #63615E;
+$black: #000000;
+$med-white: rgba(255,255,255,0.8);
+$light-white: rgba(255,255,255,0.25);
+$light-blue: #2665FF;
+$white: #ffffff;
+$blue: #004AFF;
+$dark-blue: #003fd9;
+$off-white: #FAFAFA;
+$body-background: $white;
+$body-font-color: $dark-gray;
+$body-font-family: 'Karla', Helvetica, Roboto, Arial, sans-serif;
+$body-antialiased: true;
+$global-weight-normal: normal;
+$global-weight-bold: lighter;
+$global-radius: 2px;
+$global-text-direction: ltr;
+$global-flexbox: true;
+
+// Spacing
+$space-1: rem-calc(5);
+$space-2: rem-calc(10);
+$space-3: rem-calc(20);
+$space-4: rem-calc(30);
+$space-5: rem-calc(40);
+$space-6: rem-calc(50);
+$space-7: rem-calc(80);
+$space-8: rem-calc(100);
+$space-9: rem-calc(120);
+$space-10: rem-calc(150);
+$space-11: rem-calc(200);
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-position: 1rem;
+$global-menu-padding: 0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
+
+@include add-foundation-colors;
+
+// Breakpoints
+// --------------
+
+$breakpoints: (
+    small: 0,
+    shmedium: 500px,
+    medium: 700px,
+    large: 1000px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+    xxxlarge: 1600px,
+
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small shmedium medium large xlarge xxlarge xxxlarge);
+
+// The Grid
+// -----------
+
+$grid-row-width: $global-width;
+$grid-column-count: 12;
+$grid-column-gutter: (
+    small: 20px,
+    large: 40px,
+);
+$grid-column-align-edge: true;
+$grid-column-alias: 'columns';
+$block-grid-max: 8;
+
+// Base Typography
+// ------------------
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-bold;
+$header-font-style: normal;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+
+// Type Sizing
+$title-size: rem-calc(50);
+$h1-size: rem-calc(39);
+$h2-size: rem-calc(31);
+$h3-size: rem-calc(25);
+$h4-size: rem-calc(20);
+$h5-size: rem-calc(16);
+$h6-size: rem-calc(12);
+$title-size-small: rem-calc(39);
+$h1-size-small: rem-calc(27);
+$h2-size-small: rem-calc(23);
+$h3-size-small: rem-calc(19);
+$h4-size-small: rem-calc(16);
+$h5-size-small: rem-calc(12);
+$h6-size-small: rem-calc(10);
+$small-size: rem-calc(14);
+
+// Type Breakpoints
+$header-styles: (
+    small: (
+        'h1': ('font-size': $h1-size-small),
+        'h2': ('font-size': $h2-size-small),
+        'h3': ('font-size': $h3-size-small),
+        'h4': ('font-size': $h4-size-small),
+        'h5': ('font-size': $h5-size-small),
+        'h6': ('font-size': $h6-size-small),
+    ),
+    medium: (
+        'h1': ('font-size': $h1-size),
+        'h2': ('font-size': $h2-size),
+        'h3': ('font-size': $h3-size),
+        'h4': ('font-size': $h4-size),
+        'h5': ('font-size': $h5-size),
+        'h6': ('font-size': $h6-size),
+    )
+);
+
+// Heading Config
+$header-color: $black;
+$header-lineheight: 1.25;
+$header-margin-bottom: 1.25em;
+$header-text-rendering: optimizeLegibility;
+$header-small-font-color: $medium-gray;
+
+// Paragraphs
+$paragraph-lineheight: 1.7;
+$paragraph-margin-bottom: 1.5rem;
+$paragraph-text-rendering: optimizeLegibility;
+$small-font-size: 80%;
+
+// Code Blocks
+$code-color: $black;
+$code-font-family: $font-family-monospace;
+$code-font-weight: $global-weight-normal;
+$code-background: $light-gray;
+$code-border: 1px solid $light-gray;
+$code-padding: rem-calc(2 5 1);
+
+// Links
+$anchor-color: $primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;
+
+// Lists
+$list-lineheight: $paragraph-lineheight;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-style-type: disc;
+$list-style-position: outside;
+$list-side-margin: 1.25rem;
+$list-nested-side-margin: 1.25rem;
+
+// Horizontal Rule
+$hr-width: $global-width;
+$hr-border: 1px solid $light-gray;
+$hr-margin: $space-5 auto;
+
+// Shadows
+$item-shadow: 0 10px 50px 0 rgba(0,0,0,0.085);
+$item-hover-shadow: 0 15px 50px 0 rgba(0,0,0,0.15);
+
+// Buttons
+// ----------
+
+$button-font-family: $header-font-family;
+$button-padding: rem-calc(15 20);
+$button-margin: 0 0 $paragraph-margin-bottom 0;
+$button-fill: solid;
+$button-background: $primary-color;
+$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-color: $white;
+$button-color-alt: $black;
+$button-radius: $global-radius;
+$button-hollow-border-width: 1px;
+$button-sizes: (
+    tiny: 0.6rem,
+    small: $h6-size,
+    default: $small-size,
+    large: $global-font-size
+);
+$button-palette: $foundation-palette;
+$button-opacity-disabled: 0.25;
+$button-background-hover-lightness: -20%;
+$button-hollow-hover-lightness: -50%;
+$button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+
+// Flexbox Utilities
+// ---------------------
+
+$flex-source-ordering-count: 6;
+$flexbox-responsive-breakpoints: true;
+
+// Forms
+// ---------
+
+$fieldset-border: 1px solid $light-gray;
+$fieldset-padding: rem-calc(20);
+$fieldset-margin: rem-calc(18 0);
+$legend-padding: rem-calc(0 3);
+$form-spacing: rem-calc(16);
+$helptext-color: $black;
+$helptext-font-size: rem-calc(13);
+$helptext-font-style: italic;
+$input-prefix-color: $black;
+$input-prefix-background: $light-gray;
+$input-prefix-border: 1px solid $light-gray;
+$input-prefix-padding: 1rem;
+$form-label-color: $black;
+$form-label-font-size: rem-calc(14);
+$form-label-font-weight: $global-weight-normal;
+$form-label-line-height: 1.8;
+$select-background: $white;
+$select-triangle-color: $dark-gray;
+$select-radius: $global-radius;
+$input-color: $black;
+$input-placeholder-color: $medium-gray;
+$input-font-family: inherit;
+$input-font-size: rem-calc(16);
+$input-font-weight: $global-weight-normal;
+$input-line-height: $global-lineheight;
+$input-background: $white;
+$input-background-focus: $white;
+$input-background-disabled: $light-gray;
+$input-border: 1px solid $light-gray;
+$input-border-focus: 1px solid $dark-gray;
+$input-padding: $form-spacing / 2;
+$input-shadow: inset 0 1px 2px rgba($black, 0.1);
+$input-shadow-focus: 0 0 5px $medium-gray;
+$input-cursor-disabled: not-allowed;
+$input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+$input-number-spinners: true;
+$input-radius: $global-radius;
+$form-button-radius: $global-radius;
+
+// Tables
+// ----------
+
+$table-background: $white;
+$table-color-scale: 0;
+$table-border: 1px solid $light-gray;
+$table-padding: rem-calc(20);
+$table-hover-scale: 0;
+$table-row-hover: darken($table-background, $table-hover-scale);
+$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
+$table-is-striped: true;
+$table-striped-background: none;
+$table-stripe: even;
+$table-head-background: transparentize($black, .97);
+$table-head-row-hover: darken($table-head-background, $table-hover-scale);
+$table-foot-background: smart-scale($table-background, $table-color-scale);
+$table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
+$table-head-font-color: $body-font-color;
+$table-foot-font-color: $body-font-color;
+$show-header-for-stacked: true;
+$table-stack-breakpoint: medium;
+
+// Xy Grid
+// -----------
+
+$xy-grid: true;
+$grid-container: $global-width;
+$grid-columns: 12;
+$grid-margin-gutters: (
+    small: 20px,
+    medium: 30px
+);
+$grid-padding-gutters: $grid-margin-gutters;
+$grid-container-padding: $grid-padding-gutters;
+$grid-container-max: $global-width;
+$block-grid-max: 8;

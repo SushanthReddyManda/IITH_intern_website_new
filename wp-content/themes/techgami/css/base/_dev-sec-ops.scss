@@ -1,0 +1,196 @@
+/*==============================
+=          Dev-Sec-Ops         =
+==============================*/
+
+
+section.about-quote-dev {
+    display: flex;
+  
+    .background {
+      padding: $space-10 $space-10 $space-10 0;
+      background: $blue;
+      position: relative;
+  
+      @include breakpoint (medium down) {
+        padding: $space-8 $space-5 $space-8 0;
+      }
+  
+      @include breakpoint (shmedium down) {
+        padding: $space-7 $space-6 $space-7 0;
+      }
+  
+      @include breakpoint (small only) {
+        padding: $space-7 $space-3 $space-7 0;
+      }
+  
+  
+      &:before {
+        content: "";
+        position: absolute;
+        left: -100%;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $blue;
+      }
+  
+      h3.white {
+        max-width: rem-cacl(590);
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  section.framework {
+    padding: $space-11 0;
+  
+    @include breakpoint (medium down) {
+      padding: $space-8 0;
+    }
+  
+    @include breakpoint (shmedium down) {
+      padding: $space-7 0;
+    }
+  
+    h2 {
+      text-align: center;
+      margin-bottom: $space-8;
+  
+      @include breakpoint (medium down) {
+        margin-bottom: $space-6;
+      }
+  
+      @include breakpoint (small only) {
+        margin-bottom: $space-4;
+      }
+    }
+  }
+  
+  section.cornerstones {
+    padding: 0 0 $space-11 0;
+  
+    @include breakpoint (medium down) {
+      padding: 0 0 $space-8 0;
+    }
+  
+    @include breakpoint (shmedium down) {
+      padding: 0 0 $space-7 0;
+    }
+  
+    h2 {
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: $space-8;
+      max-width: rem-calc(600);
+  
+      @include breakpoint (medium down) {
+        margin-bottom: $space-6;
+      }
+  
+      @include breakpoint (small only) {
+        margin-bottom: $space-4;
+      }
+    }
+  }
+  
+  .framework-card {
+    padding-bottom: $space-4;
+    &:last-child {
+      @include breakpoint (medium down) {
+        padding-bottom: 0;
+      }
+    }
+  }
+  
+  .framework-card-content {
+    display: flex;
+    box-shadow: $item-shadow;
+  
+    @include breakpoint (medium down) {
+      flex-direction: column;
+    }
+  
+    div {
+      padding: $space-6;
+  
+      @include breakpoint (shmedium down) {
+        padding: $space-4;
+      }
+  
+      &.blue-bg {
+  
+        h3 {
+          max-width: rem-calc(400);
+          margin-bottom: $space-2;
+        }
+  
+        h5 {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  .icon-card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: $space-4;
+    
+    &:last-child {
+      @include breakpoint (medium down) {
+        padding-bottom: 0;
+      }
+    }
+  
+    @include breakpoint (medium only) {
+      padding-bottom: $space-3;
+    } 
+  
+    &:hover {
+      .icon-card-content {
+        box-shadow: $item-hover-shadow;
+        transform: scale(1.03);
+      }
+    }
+  }
+  
+  .icon-card-content {
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    box-shadow: $item-shadow;
+    height: 100%;
+    transition: 0.3s box-shadow ease-in-out,
+                0.3s transform ease-in-out;
+  
+    .icon-border-bottom {
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid $light-gray;
+      margin-bottom: $space-4;
+      max-height: rem-calc(185);
+  
+      img {
+        width: 100%;
+        margin: $space-5 0;
+      }
+  
+    }
+  
+    h4 {
+      text-align: center;
+      margin-bottom: $space-2;
+    }
+  
+    .list {
+      margin: 0;
+      padding-bottom: $space-5;
+  
+      p {
+        text-align: center;
+        padding: rem-calc(5) 0;
+        margin-bottom: 0;
+      }
+    }
+  }

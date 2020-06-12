@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="22px" viewBox="0 0 16 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/arrow-down-long</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="20.2583333 16.575 13 23.8333333 5.74166667 16.575 7.04166667 15.275 12.1333333 20.3666667 12.1333333 2.16666667 13.8666667 2.16666667 13.8666667 20.3666667 18.9583333 15.275"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer-2" transform="translate(-1291.000000, -119.000000)">
+            <g id="Footer">
+                <g id="Back-to-Top" transform="translate(1269.000000, 100.000000)">
+                    <g id="Icon/arrow-down-long" transform="translate(30.000000, 30.000000) rotate(-180.000000) translate(-30.000000, -30.000000) translate(17.000000, 17.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="arrow-down-long" fill-rule="nonzero"></g>
+                        <g id="Color/White" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="evenodd">
+                            <rect id="Fill/White" x="0" y="0" width="26" height="26"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

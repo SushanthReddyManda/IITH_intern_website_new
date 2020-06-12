@@ -1,0 +1,135 @@
+/*=====================================
+=            Scroll Reveal            =
+=====================================*/
+
+.sw-b-l {
+    position: relative;
+  }
+  
+  .isnt-visible,
+  footer {
+  
+    *,div {
+      opacity: 0;
+      transition: 0.3s opacity ease-in-out 0.4s;
+    }
+  
+    &:before {
+      transition: 0.3s left cubic-bezier(0.105, 0.265, 0.17, 0.975) 0.6s,
+                  0.3s width cubic-bezier(0.105, 0.265, 0.17, 0.975) 0s;
+      content: '';
+      position: absolute;
+      top:0;
+      left: 0;
+      background: $blue;
+      width: 0;
+      height: 100%;
+      z-index: 3;
+    }
+  }
+  
+  .is-visible {
+  
+    *,div {
+      opacity: 1;
+    }
+  
+    &:before {
+      left: 100%;
+      width: 100%;
+    } 
+  }
+  
+  .is-visible.scrollwipe-header{
+  
+    &:before {
+      left: 100%;
+      width: 100%;
+    } 
+  }
+  
+  .isnt-visible.scrollwipe-header,
+  .scrollwipe-header,
+  .isnt-visible.scrollwipe-v-header,
+  .scrollwipe-v-header,
+  .isnt-visible.scrollwipe-block,
+  .scrollwipe-block { 
+  
+    overflow: hidden;
+    color: transparent;
+    transition: 0.3s color ease-in-out 0.4s;
+  
+    &:before {
+      transition: 0.3s left cubic-bezier(0.105, 0.265, 0.17, 0.975) 0.6s,
+                  0.3s width cubic-bezier(0.105, 0.265, 0.17, 0.975) 0s;
+      content: '';
+      position: absolute;
+      top:0;
+      left: 0;
+      background: $blue;
+      width: 0;
+      height: 100%;
+      z-index: 3;
+    }
+  }
+  
+  .isnt-visible.scrollwipe-header,
+  .scrollwipe-header {
+    position: relative;
+    float: left;
+    clear: left;
+  }
+  
+  .isnt-visible.scrollwipe-v-header,
+  .scrollwipe-v-header {
+    position: relative; // Trying to fix mobile glitch
+    overflow: hidden; 
+  
+  // Mobile
+    @include breakpoint (medium down) {
+      float: left;
+      clear: left;
+    }
+  }
+  
+  .center-headline {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .isnt-visible.scrollwipe-block,
+  .scrollwipe-block {
+    img,
+    div {
+      opacity: 0;
+      transition: 0.3s opacity cubic-bezier(0.105, 0.265, 0.17, 0.975) 0.4s;
+    }
+  }
+  
+  .is-visible.scrollwipe-block {
+    img,
+    div {
+      opacity: 1;
+    }
+  }
+  
+  .is-visible {
+  
+    &:before {
+      left: 100%;
+      width: 100%;
+    } 
+  }
+  
+  // For wipes of black text H1,H2,H3
+  
+  .is-visible.scrollwipe-header,
+  .is-visible.scrollwipe-v-header {
+    color: $black;
+  }
+  
+  // For wipes of white text H1,H2,H3
+  
+  .is-visible.scrollwipe-header.white {
+    color: $white;
+  }

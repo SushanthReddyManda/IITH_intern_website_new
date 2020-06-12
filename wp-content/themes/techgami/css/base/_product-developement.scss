@@ -1,0 +1,197 @@
+/*===========================================
+=            Product Development            =
+===========================================*/
+
+.our-approach {
+
+    h2 {
+      margin-bottom: $space-8;
+
+      @include breakpoint (shmedium down) {
+        margin-bottom: $space-6;
+      }
+
+      @include breakpoint (small only) {
+        margin-bottom: $space-4;
+      }
+    }
+
+    .row {
+      @include breakpoint(small only) {
+        padding-left: 0;
+      }
+    }
+}
+
+section.section.bg-half--blue.section-margin--bottom {
+
+  @include breakpoint(medium only) {
+    margin-bottom: $space-8;
+  }
+
+  @include breakpoint(shmedium only) {
+    margin-bottom: $space-7;
+  }
+
+
+  @include breakpoint(small only) {
+    margin-bottom: 0;
+  }
+
+  .row {
+    @include breakpoint(small only) {
+      padding-right: 0;
+    }
+  }
+}
+
+.ops-enabled {
+    padding: $space-10 $space-8 $space-10 0;
+
+    @include breakpoint (medium down) {
+      padding: $space-8 $space-5 $space-8 0;
+    }
+
+    @include breakpoint (shmedium down) {
+      padding: $space-7 $space-6 $space-7 0;
+    }
+
+    @include breakpoint (small only) {
+      padding: $space-7 rem-calc(25) $space-6 0;
+    }
+
+    .heading-block {
+        display: flex;
+        margin-bottom: $space-7;
+
+        @include breakpoint (medium down) {
+          display: block;
+        }
+
+        @include breakpoint (shmedium down) {
+          margin-bottom: $space-6;
+        }
+
+        @include breakpoint (small only) {
+          margin-bottom: $space-2;
+        }
+
+        h2, p {
+            color: $white;
+        }
+        p {
+            opacity: .8;
+        }
+    }
+
+    .text-card {
+      @include breakpoint (medium down) {
+        margin-bottom: $space-5;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .heading-block__p {
+        align-self: flex-end;
+    }
+
+}
+
+section.section.section-margin--bottom.row.column {
+
+  @include breakpoint (shmedium only) {
+    margin-bottom: $space-7;
+  }
+  @include breakpoint (small only) {
+    padding: 0;
+  }
+}
+
+.related-services {
+    margin-top: $space-6;
+    margin-bottom: $space-10;
+
+    @include breakpoint (medium down) {
+      margin-bottom: $space-9;
+    }
+
+    @include breakpoint (shmedium down) {
+      margin-bottom: $space-7;
+    }
+
+    @include breakpoint (small down) {
+      margin-bottom: $space-7;
+    }
+
+    h2 {
+        margin-bottom: $space-8;
+
+        @include breakpoint (medium down) {
+          margin-bottom: $space-6;
+        }
+
+        @include breakpoint (shmedium down) {
+          margin-bottom: $space-4;
+        }
+
+        @include breakpoint (small only) {
+          margin-bottom: $space-4;
+        }
+    }
+
+    .icon-card__container {
+
+      @include breakpoint (shmedium down) {
+        display: block;
+      }
+
+      .icon-card--large {
+
+        &:last-child {
+          @include breakpoint (shmedium down) {
+            padding-bottom: 0;
+          }
+        }
+
+        .icon-border-bottom {
+
+          @include breakpoint (medium down) {
+            padding: $space-3;
+          }
+
+        }
+        .icon-card__description {
+          p {
+            @include breakpoint (shmedium down) {
+              max-width: 400px;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+}
+.section.section-margin--bottom.row.column {
+  .small-collapse.split-card__container {
+    @include breakpoint (medium only) {
+      margin-left: .625rem;
+    }
+    @include breakpoint (shmedium only) {
+      margin-left: .625rem;
+    }
+    ul {
+      @include breakpoint (medium down) {
+        margin-bottom: 0;
+      }
+      li{
+        &:last-child {
+          @include breakpoint (medium down) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

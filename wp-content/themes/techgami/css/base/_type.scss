@@ -1,0 +1,388 @@
+/*==================================
+=            Typography            =
+==================================*/
+
+// Custom Fonts
+@font-face {
+    font-family: 'maisonmono-regular';
+    src: url('fonts/maisonmono-regular.otf') format('opentype'),
+    url('fonts/maisonmono-regular.woff2') format('woff2'), 
+    url('fonts/maisonmono-regular.woff') format('woff'), 
+    url('fonts/maisonmono-regular.ttf') format('truetype'), 
+    url('fonts/maisonmono-regular.svg#maisonmono-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'druk-heavy';
+    src: url('fonts/druk-heavy.eot'); /* ie9 and above */
+    src: url('fonts/druk-heavy.eot?#iefix') format('embedded-opentype'), 
+    url('fonts/druk-heavy.otf') format('opentype'),
+    url('fonts/druk-heavy.woff2') format('woff2'), 
+    url('fonts/druk-heavy.woff') format('woff'), 
+    url('fonts/druk-heavy.ttf') format('truetype'), 
+    url('fonts/druk-heavy.svg#druk-heavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+h1 {
+    font-family: 'druk-heavy';
+    font-size: rem-calc(100);
+    line-height: rem-calc(95);
+    letter-spacing: rem-calc(1);
+
+    @include breakpoint (medium only) {
+        font-size: rem-calc(80);
+        line-height: rem-calc(80);
+    }
+
+    @include breakpoint (shmedium down) {
+        font-size: rem-calc(70);
+        line-height: rem-calc(70);
+    }
+
+    @include breakpoint (small only) {
+        font-size: rem-calc(60);
+        line-height: rem-calc(55);
+    }
+}
+
+h2 {
+    font-family: 'druk-heavy';
+    font-size: rem-calc(80);
+    line-height: rem-calc(80);
+    letter-spacing: rem-calc(1);
+
+    @include breakpoint (medium only) {
+        font-size: rem-calc(70);
+        line-height: rem-calc(70);
+    }
+
+    @include breakpoint (shmedium down) {
+        font-size: rem-calc(60);
+        line-height: rem-calc(60);
+    }
+
+    @include breakpoint (small only) {
+        font-size: rem-calc(50);
+        line-height: rem-calc(50);
+    }
+}
+
+h3 {
+    font-family: 'druk-heavy';
+    font-size: rem-calc(60);
+    line-height: rem-calc(55);
+    letter-spacing: rem-calc(1);
+
+    @include breakpoint (medium only) {
+        font-size: rem-calc(50);
+        line-height: rem-calc(50);
+    }
+
+    @include breakpoint (shmedium down) {
+        font-size: rem-calc(40);
+        line-height: rem-calc(40);
+    }
+}
+
+h4 {
+    font-family: 'druk-heavy';
+    font-size: rem-calc(40);
+    line-height: rem-calc(40);
+    letter-spacing: rem-calc(1);
+
+    @include breakpoint (small only) {
+      font-size: rem-calc(32);
+      line-height: rem-calc(30);
+    }
+}
+
+h5 {
+    font-family: 'maisonmono-regular';
+    font-weight: lighter;
+    font-size: rem-calc(12);
+    line-height: rem-calc(20);
+    letter-spacing: rem-calc(2);
+    margin-bottom: rem-calc(30);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    font-family: 'maisonmono-regular';
+    font-weight: lighter;
+    letter-spacing: rem-calc(1.5);
+    -webkit-font-smoothing: antialiased;
+}
+
+p {
+    font-family: 'Karla', sans-serif;
+    font-size: rem-calc(16);
+    line-height: rem-calc(25);
+    letter-spacing: rem-calc(0);
+}
+
+p.small {
+    font-family: 'Karla', sans-serif;
+    font-size: rem-calc(14);
+    line-height: rem-calc(22);
+    letter-spacing: rem-calc(0);
+    margin-bottom: rem-calc(20);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+span,
+p {
+
+    &.blue {
+        color: $blue;
+    }
+
+    &.white {
+        color: $white;
+    }
+
+    &.gray {
+        color: lighten( $black, 46%);
+    }
+
+    &.light-white {
+        color: $white;
+        opacity: 0.8;
+    }
+}
+
+.white {
+    h1, h2, h3, h4, h5, h6 { color: $white; }
+    p { color: $white; }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+    text-transform: uppercase;
+}
+
+::selection {
+    background: $blue;
+    color: $white;
+}
+
+// Vertical Type
+.vertical-type {
+    h3 {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+        text-align: right;
+        width: 200px; // width: fit-content;
+        margin-top: rem-calc(205);
+        margin-left: -5px;
+
+        @include breakpoint (medium down) {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transform-origin: none;
+            transform-origin: none;
+            text-align: left;
+            width: auto; // width: fit-content;
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+}
+
+h3.vertical-type {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    text-align: right;
+    width: 200px; // width: fit-content;
+    margin-top: rem-calc(205);
+    margin-left: -5px;
+
+    @include breakpoint (medium down) {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: initial;
+        transform-origin: initial;
+        text-align: left;
+        width: auto; // width: fit-content;
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+
+.text--small-expanded {
+    font-family: 'maisonmono-regular';
+    font-size: rem-calc(12);
+    letter-spacing: rem-calc(1.75);
+}
+
+// Mixins
+@mixin title-size {
+    font-size: $title-size-small;
+    @include breakpoint(medium) {
+        font-size: $title-size;
+    }
+}
+
+@mixin h1-size {
+    font-size: $h1-size-small;
+    @include breakpoint(medium) {
+        font-size: $h1-size;
+    }
+}
+
+@mixin h2-size {
+    font-size: $h2-size-small;
+    @include breakpoint(medium) {
+        font-size: $h2-size;
+    }
+}
+
+@mixin h3-size {
+    font-size: $h3-size-small;
+    @include breakpoint(medium) {
+        font-size: $h3-size;
+    }
+}
+
+@mixin h4-size {
+    font-size: $h4-size-small;
+    @include breakpoint(medium) {
+        font-size: $h4-size;
+    }
+}
+
+@mixin h5-size {
+    font-size: $h5-size-small;
+    @include breakpoint(medium) {
+        font-size: $h5-size;
+    }
+}
+
+@mixin custom-size ($size,
+$small-size) {
+    font-size: $small-size;
+    @include breakpoint(medium) {
+        font-size: $size;
+    }
+}
+
+
+/**
+ *
+ * Added spacing for longform content
+ * -----------------------------------
+ *
+ */
+
+.entry> {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 1.5em 0 $paragraph-margin-bottom;
+    }
+
+    hr {
+        margin: rem-calc(40) 0;
+        @include breakpoint(large) {
+            margin: rem-calc(60 0);
+        }
+    }
+
+    *:first-child {
+        margin-top: 0;
+    }
+}
+
+.label {
+    font-size: $small-size;
+    font-family: $body-font-family;
+    color: $primary-color;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.section__divider {
+    max-width: 100px;
+    margin-bottom: rem-calc(60);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+
+/*----------  Type Utilities  ----------*/
+
+.text--center {
+    text-align: center;
+}
+
+.text--primary {
+    color: $primary-color;
+}
+
+.text--secondary {
+    color: $secondary-color;
+}
+
+.text--small {
+    font-size: $small-size;
+}
+
+.text--gray {
+    color: $medium-gray !important;
+}
+
+.text--white {
+    color: $white;
+}
+
+.text--bold {
+    font-family: $global-weight-bold;
+}
+
+.text--upper {
+    text-transform: uppercase;
+}
+
+.text--black {
+    color: $black;
+}
+
+strong {
+    color: $black;
+    font-weight: $global-weight-bold;
+}
+
+
+
+/*----------  Responsive Type  ----------*/
+
+html {
+
+    @include breakpoint(shmedium down) {
+        font-size: 90%;
+    }
+}

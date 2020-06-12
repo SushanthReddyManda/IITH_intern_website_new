@@ -1,0 +1,181 @@
+/*==============================
+=            Forms             =
+==============================*/
+
+.contact-us-form {
+    padding: 0;
+    overflow: hidden; /* this fixes the button breaking out of the container */
+  
+    form {
+      textarea[rows] {
+        height: 100px;
+  
+        &.white-line,
+        &.gray-line {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+  
+  .get-in-touch {
+    form {
+      textarea {
+        &.white-line,
+        &.gray-line {
+          padding-top: 5px;
+        }
+      }
+    }
+  }
+  
+  h4.form-spacing {
+    padding: $space-5;
+    margin-bottom: 0;
+  
+    @include breakpoint (small only) {
+      padding: $space-4;
+    }
+  }
+  
+  form {
+  
+    & {
+  
+      .form-spacing {
+        padding: 0 $space-5;
+  
+        @include breakpoint (small only) {
+          padding: 0 $space-4;
+        }
+      }
+  
+      textarea {
+        height: 100px;
+        resize: none;
+      }
+  
+      input, button {
+  
+        &.button,
+        &.button-long {
+          font-size: rem-calc(12);
+          font-family: 'maisonmono-regular';
+          font-weight: lighter;
+          letter-spacing: rem-calc(1.5);
+          text-transform: uppercase;
+          height: rem-calc(60);
+          margin-top: rem-calc(25);
+          margin-bottom: 0;
+          border-radius: 0;
+          cursor: pointer;
+        }
+  
+        &.button-long {
+          width: 100%;
+          background: rgba(255,255,255,0.15);
+          color: $white;
+          transition: 0.3s background ease-in-out;
+  
+          &:hover {
+            background: #003fd9;
+          }
+        }
+      }
+  
+      input,textarea {
+        font-family: 'karla' ,sans-serif;
+        font-size: rem-calc(14);
+        line-height: rem-calc(14);
+        color: $white;
+        background: transparent;
+        box-shadow: none;
+  
+        &[type=text]:focus,
+        &:focus {
+          background: transparent;
+          box-shadow: none;
+          outline: 0;
+          border-top: 0;
+          border-left: 0;
+          border-right: 0;
+          border-bottom: 1px solid $light-white; 
+        }
+  
+        &.white-line,
+        &.gray-line {
+          background: transparent;
+          box-shadow: none;
+          border: 0;
+          border-bottom: 1px solid $light-white;
+          padding-left: 0;
+          padding-top: 0;
+  
+          &::placeholder {
+            font-family: 'karla' ,sans-serif;
+            font-size: rem-calc(14);
+            line-height: rem-calc(14);
+            color: $med-white;
+          }
+        }
+  
+        &.gray-line {
+          border-bottom: 1px solid $light-gray;
+  
+          &::placeholder {
+            color: $medium-gray;
+          }
+        }
+      }
+  
+      input {
+  
+        &.white-line,
+        &.gray-line {
+          margin-bottom: rem-calc(22);
+        }
+      }
+  
+      label {
+        color: $med-white;
+  
+        input {
+          background: transparent;
+          box-shadow: none;
+          border: 0;
+          border-bottom: 1px solid $light-blue;
+        }
+      }
+    }
+  
+    /* Change the white to any color ;) */
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px $dark-blue inset!important;
+        text-indent: 12px;
+        border-radius: 0;
+        background: transparent!important;
+    }
+  
+    /*Change text in autofill textbox*/
+    input:-webkit-autofill {
+        -webkit-text-fill-color: $white !important;
+    }
+  
+    /* Sroll Bar Styling */
+  
+    ::-webkit-scrollbar {
+        width: rem-calc(10);
+    }
+     
+    ::-webkit-scrollbar-track {
+        background: $dark-blue; 
+        border-radius: rem-calc(10);
+        margin-bottom: rem-calc(20);
+    }
+     
+    ::-webkit-scrollbar-thumb {
+        border-radius: rem-calc(10);
+        background: $light-blue;
+    }
+    
+  } /* End of Form */

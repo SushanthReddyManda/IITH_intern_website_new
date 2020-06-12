@@ -1,0 +1,60 @@
+/*=============================
+=            Heros            =
+=============================*/
+
+// Inner Page Heros
+section.hero {
+    display: flex;
+    height: 100vh;
+    max-height: rem-calc(700);
+    max-height: 80vh;
+    /* for tall screens */
+    min-height: rem-calc(600);
+    /* for short screens */
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: $space-8;
+
+    @include breakpoint (medium down) {
+        padding-bottom: $space-8;
+        max-height: rem-calc(500);
+    }
+
+    @include breakpoint (shmedium only) {
+        padding-bottom: $space-6;
+        max-height: rem-calc(400);
+    }
+
+    @include breakpoint (small only) {
+        padding-bottom: $space-4;
+        max-height: rem-calc(350);
+    }
+}
+
+// Home Page Hero
+.hero--home {
+    display: flex;
+    height: 100vh;
+    max-height: rem-calc(900);
+    /* for tall screens */
+    min-height: rem-calc(650);
+    /* for short screens */
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: $space-8;
+
+    @include breakpoint (medium down) {
+        padding-bottom: $space-8;
+        max-height: rem-calc(800);
+    }
+
+    @include breakpoint (shmedium only) {
+        padding-bottom: $space-6;
+        max-height: rem-calc(700);
+    }
+
+    @include breakpoint (small only) {
+        padding-bottom: $space-4;
+        max-height: rem-calc(550);
+    }
+}

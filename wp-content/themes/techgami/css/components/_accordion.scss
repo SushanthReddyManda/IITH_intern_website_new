@@ -1,0 +1,97 @@
+/*===============================
+=            Accordian          =
+===============================*/
+
+ul.accordion {
+    list-style: none;
+    border-top: 1px solid $light-gray;
+    margin: 0;
+  
+    li.accordion-tab {
+      position: relative;
+      padding: rem-calc(15) 0;
+      border-bottom: 1px solid $light-gray;
+      cursor: pointer;
+  
+      @include breakpoint (medium down) {
+        &:last-child {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+  
+      span {
+        display: block;
+        position: relative;
+        width: 100%;
+        transition: 0.3s color ease-in-out;
+        padding-right: 30px;
+  
+        &:after {
+          content: '+';
+          display: block;
+          position: absolute;
+          top: 2%;
+          right: 0;
+          height: rem-calc(24);
+          width: rem-calc(24);
+          background: $blue;
+          color: $white;
+          border-radius: rem-calc(24);
+          font-size: rem-calc(22);
+          line-height: rem-calc(20);
+          font-weight: lighter;
+          text-align: center;
+          transition: 0.3s transform ease-in-out,
+                      0.3s background ease-in-out,
+                      0.3s color ease-in-out;
+        }
+      }
+  
+      p {
+        height: 0;
+        max-height: 600px;
+        overflow: hidden;
+        margin: 0;
+        width: calc(100% - 6px);
+        transition: 0.3s height ease-in-out,
+                    0.3s margin ease-in-out;
+  
+        &::-webkit-scrollbar {
+            width: rem-calc(10);
+        }
+  
+        &::-webkit-scrollbar-track {
+            background: $light-gray;
+            border-radius: rem-calc(10);
+            margin: rem-calc(8) 0 rem-calc(4) rem-calc(20);
+        }
+  
+        &::-webkit-scrollbar-thumb {
+            border-radius: rem-calc(10);
+            background: $medium-gray;
+        }
+      }
+  
+      &.content-reveal {
+        span {
+          color: $black;
+  
+          &:after {
+            transform: rotate(45deg);
+            background: $light-gray;
+            color: $medium-gray;
+          }
+        }
+  
+        p {
+          height: rem-calc(123);
+          overflow-y: scroll;
+          margin-top: rem-calc(8);
+          margin-bottom: rem-calc(5);
+          padding-right: rem-calc(20);
+        }
+      }
+    }
+  }
+  

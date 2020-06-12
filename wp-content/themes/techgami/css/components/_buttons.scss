@@ -1,0 +1,161 @@
+/*===============================
+=            Buttons            =
+===============================*/
+
+.button {
+    font-weight: lighter;
+}
+
+a,
+button {
+  &.button {
+    position: relative;
+    font-family: 'maisonmono-regular';
+    letter-spacing: rem-calc(2);
+    font-size: rem-calc(12);
+    border-radius: 0;
+    border: none;
+    padding: rem-calc(18) rem-calc(30);
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      width: 0;
+      background: $white;
+      height: 100%;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+      transition: 0.4s width cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
+                  0.4s left cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
+                  0.4s transform cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    }
+
+    &:hover {
+
+      &:before {
+        transform: translateX(110%);
+        width: 100%;
+      }
+    }
+    &.white {
+      background: $white;
+      color: $blue;
+      transition: 0.3s background ease-in-out;
+
+      &:before {
+        background: $blue;
+      }
+      &:hover {
+        background: rgba(255,255,255,0.9);
+      }
+    }
+  }
+  &.button-white-arrow {
+    background: transparent;
+    color: $white;
+    font-family: 'maisonmono-regular';
+    letter-spacing: rem-calc(2);
+    font-size: rem-calc(12);
+    border-radius: 0;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $white;
+      opacity: 0.3;
+      margin-bottom: rem-calc(18);
+      transition: 0.3s opacity ease-in-out;
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      transform: translateY(rem-calc(1));
+      width: rem-calc(16);
+      height: rem-calc(11);
+      margin-left: rem-calc(10);
+      background-size: cover;
+      background-position: center center;
+      background-image: url('../img/arrow-right-long.svg');
+      transition: 0.3s transform ease-in-out;
+    }
+    &:hover {
+      &:after {
+        transform: translate(rem-calc(5), rem-calc(1));
+      }
+      &:before {
+        // opacity: 0.75;
+      }
+    }
+  }
+}
+
+// Octogon Buttons
+
+a.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 62px;
+  height: 62px;
+
+  img {
+    position: absolute;
+    transition: 0.3s transform ease-in-out;
+
+    &.arrow-up-long {
+      transform: translateX(rem-calc(-0.5));
+      width: rem-calc(12);
+    }
+  }
+
+  &:hover {
+
+    img {
+
+      &.polygon-background {
+        transform: rotate(90deg) scale(1.1);
+      }
+    }
+  }
+
+  @include breakpoint(small only) {
+    padding: $space-3 0 $space-1 0;
+  }  
+
+}
+
+a.about-octo-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 93px;
+  height: 93px;
+
+  img {
+    position: absolute;
+    transition: 0.3s transform ease-in-out;
+
+    &.arrow-down-long {
+      transform: translateX(rem-calc(-0.5));
+    }
+  }
+
+  &:hover {
+
+    img {
+
+      &.polygon-background {
+        transform: rotate(90deg) scale(1.1);
+      }
+    }
+  }
+}
+
