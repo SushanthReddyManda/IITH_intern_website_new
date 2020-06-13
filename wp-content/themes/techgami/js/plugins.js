@@ -48,7 +48,7 @@ var polybg = {
 
     // the camera determines the perspective from which the user views the scene
     this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1000);
-    this.camera.position.set(-70,0,475); //Alex Changed This
+    this.camera.position.set(-120,0,475); //Alex Changed This
     // this.camera.lookAt(0,0,0);
     this.scene.add(this.camera);
 
